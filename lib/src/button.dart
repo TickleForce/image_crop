@@ -21,7 +21,8 @@ class ButtonStateNotifier extends ChangeNotifier
   }
 
   void process() {
-    _tryUpdate(ButtonState.processing);
+    //_tryUpdate(ButtonState.processing);
+    _tryUpdate(ButtonState.disabled);
   }
 
   void _tryUpdate(ButtonState state) {
