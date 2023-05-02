@@ -21,8 +21,7 @@ class ButtonStateNotifier extends ChangeNotifier
   }
 
   void process() {
-    //_tryUpdate(ButtonState.processing);
-    _tryUpdate(ButtonState.disabled);
+    _tryUpdate(ButtonState.processing);
   }
 
   void _tryUpdate(ButtonState state) {
@@ -78,7 +77,8 @@ class _ButtonShape extends StatelessWidget {
         break;
       case ButtonState.processing:
         onPressed = null;
-        child = const CircularProgressIndicator();
+        //child = const CircularProgressIndicator();
+        child = _icon;
         break;
     }
 
